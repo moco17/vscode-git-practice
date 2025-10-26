@@ -1,0 +1,17 @@
+# --- VSCode設定 ---
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# --- ビルド出力 ---
+build/
+*.o
+*.out
+*.exe
+
+# --- 一時ファイル ---
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

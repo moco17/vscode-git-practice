@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build WEBRTC_GSTREAMER",
+            "type": "shell",
+            "command": "/bin/bash",
+            "args": [
+                "-c",
+                "g++ -std=c++14 -DGST_USE_UNSTABLE_API WEBRTC_GSTREAMER.cpp -o build/WEBRTC_GSTREAMER -I ~/dev/json/single_include $(pkg-config --cflags --libs gstreamer-1.0 gstreamer-webrtc-1.0 gstreamer-sdp-1.0 glib-2.0) -lcurl"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+ 
